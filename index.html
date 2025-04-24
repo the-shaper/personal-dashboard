@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Layout</title>
+    <!-- Link to your CSS file will go here -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <div class="tabs-container">
+        <div class="tab-button tab-button--overview is-active">
+          <!-- Icon/Content for Tab 1 -->
+          1
+        </div>
+        <div class="tab-button tab-button--archive">
+          <!-- Icon/Content for Tab 2 -->
+          2
+        </div>
+        <div class="tab-button tab-button--links">
+          <!-- Icon/Content for Tab 3 -->
+          3
+        </div>
+      </div>
+
+      <div class="content-body">
+        <!-- First Tab Pane -->
+        <div class="tab-pane tab-pane--overview is-active">
+          <!-- Column 1: Intro -->
+          <div class="column column--intro">
+            <h1 class="intro__name">ALEJANDRO ALARCÓN</h1>
+            <h2 class="intro__title">CREATIVE PRODUCER</h2>
+            <p class="intro__paragraph">
+              Wouldn't call myself an artist nor a designer, yet I do both, for
+              others and me.
+            </p>
+            <p class="intro__paragraph">
+              Creative Producer is a more fitting term because I serve as a
+              conduit for entrepreneurs, builders and artists, helping them
+              shape their own visions into reality, or at least that's what I've
+              been doing for the last 8 years of my 15+ year career as a
+              creative.
+            </p>
+            <p class="intro__paragraph">
+              But I am also deeply invested on my own stuff. As I write this, I
+              am building what I see as the synthesis of everything I have
+              learned so far; a label for misfits at the fringe, where tech, art
+              and entrepreneurship can meet, with creative sovereignty as the
+              guiding light. It is called T******T F****E and its first stage is
+              set to see the light in the summer of 2025.
+            </p>
+            <p class="intro__paragraph">
+              I was a fan before a creator, and I still am. Pop culture
+              (probably the darker side of it) and technology—how they shape
+              us—have been a lifelong fascination, and I share humanity's
+              ancient itch for understanding: reality, myself, others—what this
+              "all" means(?).
+            </p>
+            <p class="intro__paragraph">
+              I have more questions than answers, but one thing I do know, is
+              that I want to see a world with more playgrounds than galleries,
+              where more people are active players rather than passive
+              observers. I believe that interfaces are a vehicle for active
+              experience. In that sense, my current quest is to build the
+              playgrounds of tomorrow.
+            </p>
+            <p class="intro__paragraph intro__paragraph--ps">
+              P.S. If you recognize this interface layout, you know who one of
+              my heroes is, and now you have a clue of what I'm building.
+            </p>
+          </div>
+
+          <!-- Column 2: Profile -->
+          <div class="column column--profile">
+            <div class="profile__image-container">
+              <!-- Placeholder for image -->
+              <img
+                src="https://bysuqex08w.ufs.sh/f/0Y1AMzm598PcamHpGhgU1sw2FSTXlm4QZMbdrfjoh0R3OWGY"
+                alt="Alejandro Alarcón Profile Picture"
+                class="profile__image"
+              />
+              <!-- You might add the '+' overlays here later with absolute positioning -->
+            </div>
+            <div class="profile__actions">
+              <div class="action-button action-button--blog">
+                <!-- Icon/Content for Blog -->
+                BLOG
+              </div>
+              <div class="action-button action-button--contact">
+                <!-- Icon/Content for Contact -->
+                CONTACT
+              </div>
+              <div class="action-button action-button--network">
+                <!-- Icon/Content for Network -->
+                NETWORK
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Skills -->
+          <div class="column column--skills">
+            <div class="skills-pane">
+              <!-- Faction/Years -->
+              <div class="skill-block skill-block--status">
+                <div class="status__item">
+                  <span class="status__label">FACTION</span>
+                  <span class="status__value status__value--boxed"
+                    >UNDISCLOSED</span
+                  >
+                </div>
+                <div class="status__item">
+                  <span class="status__label">YEARS ACTIVE</span>
+                  <span class="status__value status__value--boxed">15</span>
+                </div>
+              </div>
+
+              <!-- Ability -->
+              <div class="skill-block skill-block--ability">
+                <h3 class="skill-block__title">ABILITY</h3>
+                <div class="ability-chart">
+                  <!-- Placeholder structure for the bar chart -->
+                  <div class="ability-chart__item">
+                    <span class="ability-chart__label">CONCEPT DEV</span>
+                    <div class="ability-chart__bar-container">
+                      <div class="ability-meter" style="height: 80%"></div>
+                    </div>
+                    <span class="ability-chart__grade">A</span>
+                    <div class="ability-icon-wrapper">
+                      <span class="ability-chart__icon">
+                        <svg><!-- Your SVG code here --></svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="ability-chart__item">
+                    <span class="ability-chart__label">STRATEGY</span>
+                    <div class="ability-chart__bar-container">
+                      <div class="ability-meter" style="height: 70%"></div>
+                    </div>
+                    <span class="ability-chart__grade">B+</span>
+                    <div class="ability-icon-wrapper">
+                      <span class="ability-chart__icon">
+                        <svg><!-- Your SVG code here --></svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="ability-chart__item">
+                    <span class="ability-chart__label">VISUAL DEV</span>
+                    <div class="ability-chart__bar-container">
+                      <div class="ability-meter" style="height: 95%"></div>
+                    </div>
+                    <span class="ability-chart__grade">A+</span>
+                    <div class="ability-icon-wrapper">
+                      <span class="ability-chart__icon">
+                        <svg><!-- Your SVG code here --></svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="ability-chart__item">
+                    <span class="ability-chart__label">LISTENING</span>
+                    <div class="ability-chart__bar-container">
+                      <div class="ability-meter" style="height: 90%"></div>
+                    </div>
+                    <span class="ability-chart__grade">A</span>
+                    <div class="ability-icon-wrapper">
+                      <span class="ability-chart__icon">
+                        <svg><!-- Your SVG code here --></svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="ability-chart__item">
+                    <span class="ability-chart__label">CODING</span>
+                    <div class="ability-chart__bar-container">
+                      <div class="ability-meter" style="height: 30%"></div>
+                    </div>
+                    <span class="ability-chart__grade">C-</span>
+                    <div class="ability-icon-wrapper">
+                      <span class="ability-chart__icon">
+                        <svg><!-- Your SVG code here --></svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Metaskill -->
+              <div class="skill-block skill-block--metaskill">
+                <h3 class="skill-block__title">METASKILL</h3>
+                <p class="skill-block__description">
+                  Antidisciplinary mind. Can learn almost anything that the job
+                  requires him to and has the discernment to know when to call
+                  in deep-specialization for help.
+                </p>
+              </div>
+
+              <!-- X-Factor -->
+              <div class="skill-block skill-block--xfactor">
+                <h3 class="skill-block__title">X-FACTOR</h3>
+                <p class="skill-block__description">
+                  Atypical influences and taste. Knows that "serving" is not
+                  about himself, but about solving problems for others.
+                </p>
+              </div>
+
+              <!-- Details -->
+              <div class="skill-block skill-block--details">
+                <h3 class="skill-block__title">DETAILS</h3>
+                <div class="details-grid">
+                  <div class="details__item">
+                    <span class="details__label">STATUS</span>
+                    <span class="details__value">Active</span>
+                  </div>
+                  <div class="details__item">
+                    <span class="details__label">AVAILABILITY</span>
+                    <span class="details__value">Open</span>
+                  </div>
+                  <div class="details__item">
+                    <span class="details__label">HOMELAND</span>
+                    <span class="details__value">Mexico</span>
+                  </div>
+                  <div class="details__item">
+                    <span class="details__label">CURRENT LOCATION</span>
+                    <span class="details__value">Mexico</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Other tab panes would go here -->
+        <!-- <div class="tab-pane tab-pane--archive">...</div> -->
+        <!-- <div class="tab-pane tab-pane--links">...</div> -->
+      </div>
+    </div>
+  </body>
+</html>
