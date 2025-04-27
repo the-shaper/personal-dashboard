@@ -1,0 +1,75 @@
+/* --- Column 3: Skills --- */
+
+.column.column--skills {
+  width: 26svw;
+  padding-bottom: 12svh;
+  height: calc(
+    100vh - 3rem - 60px
+  ); /* Viewport - tabs - body padding top/bottom */
+  overflow-y: auto;
+}
+
+/* --- Default Hiding for Mobile-Only Elements --- */
+.skill-block--details-mobile,
+.bio-toggle-button,
+.profile-actions--bottom,
+.bio-modal {
+  display: none; /* Hide by default */
+}
+
+/* --- Bio Modal Styling (Default) --- */
+.bio-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-color: rgba(237, 247, 238, 0.88); /* --bg-color with 88% opacity */
+  backdrop-filter: blur(5px); /* Add blur effect */
+  -webkit-backdrop-filter: blur(5px); /* Safari support */
+  z-index: 1000; /* Ensure it's above everything */
+  display: none; /* Hidden by default */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  padding: 5%; /* Add some padding around the content */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.bio-modal.is-visible {
+  display: flex; /* Show modal when class is added */
+}
+
+.bio-modal__content {
+  /* Re-use intro styles, maybe adjust padding/width */
+  max-width: 80%; /* Limit content width */
+  max-height: 90%; /* Limit content height */
+  overflow-y: auto; /* Scroll inside content box if needed */
+  padding: 2rem; /* Inner padding for the text */
+  /* Styles copied & adapted from .column--intro */
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.bio-modal__content .intro__name {
+  margin-bottom: 2px;
+  font-size: 1.2em;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+.bio-modal__content .intro__title {
+  margin-bottom: 25px;
+  font-weight: normal;
+  color: var(--text-light);
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.bio-modal__content .intro__paragraph {
+  margin-bottom: 1em;
+}
+.bio-modal__content .intro__paragraph--ps {
+  margin-top: 30px;
+  color: var(--text-light);
+  font-size: 0.9em;
+}

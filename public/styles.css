@@ -11,7 +11,7 @@
   --text-light: #6a8689; /* Lighter gray for labels */
   --accent-color: #ff3d23; /* Red accent */
   --border-color: #c6d9d1; /* Medium gray for borders/boxes */
-  --box-bg-color: #c6d9d1; /* Slightly darker than border for some boxes */
+  --box-bg-color: #d1e7de; /* Slightly darker than border for some boxes */
   --font-mono: "Andale Mono", Courier, monospace;
 }
 
@@ -41,7 +41,7 @@ body {
   padding-right: 3rem;
   height: 6rem;
   background-color: var(--bg-color);
-  border-top: 1px solid var(--border-color); /* Space before content body border */
+  border-bottom: 1px solid var(--border-color); /* Space before content body border */
 }
 
 .tab-button {
@@ -140,6 +140,21 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+.intro__titles-wrapper.mobile {
+}
+.intro__name.mobile {
+  font-size: 1rem;
+  line-height: 1.1;
+  margin-bottom: 0.2rem;
+}
+.intro__title.mobile {
+  font-size: 0.8rem;
+  line-height: 1.1;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
 .column--intro .intro__paragraph {
   margin-bottom: 1em;
   line-height: 1.6;
@@ -153,26 +168,66 @@ body {
   font-size: 0.9em;
 }
 
+.bio-button-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.bio-button {
+  background-color: var(--text-light);
+  border: 1px solid var(--border-color);
+  color: var(--box-bg-color);
+  width: 44%;
+  padding: 8px 10px;
+  font-family: var(--font-mono);
+}
+
 /* Column 2: Profile */
 .column.column--profile {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 25.59svw;
-  /* Changed from fixed to sticky */
-  position: sticky;
+  position: static;
   top: calc(3rem + 30px); /* Stick below tabs + body top padding */
   /* Added height to match other columns */
   height: calc(
     100vh - 3rem - 60px
   ); /* Viewport - tabs - body padding top/bottom */
   /* Removed fixed positioning properties: top, left, transform */
+  overflow-y: auto; /* Add this line to enable vertical scrolling */
 }
 
 .column--profile .profile__image-container {
   margin-bottom: 25px;
   position: relative; /* Needed for '+' overlays later */
   border: 1px solid var(--text-color); /* Black border */
+}
+
+.profile_picture-wrapper.mobile {
+  display: flex;
+  align-items: center;
+  max-width: 50%;
+  padding-right: 0.8rem;
+  padding-left: 0;
+}
+
+.profile__image {
+  width: 100%;
+}
+
+.profile__image-container.mobile {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 0;
+  height: auto;
+  min-width: 100%;
+  border: none;
 }
 
 .column--profile .profile__image {
@@ -252,15 +307,25 @@ body {
   flex-direction: column;
   justify-content: space-between; /* Push items to edges */
   align-items: flex-end;
-  gap: 15px;
+  gap: 9px;
   border-bottom: none; /* No separator line for this one */
   padding-bottom: 0;
 }
+
+.skill-block--status.mobile {
+  flex-direction: row;
+  padding-top: 1rem;
+  justify-content: flex-end;
+  gap: 11px;
+  max-width: 100%;
+}
+
 .status__item {
   /* Adjust alignment if needed, default is fine */
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: flex-end;
+  gap: 0.3rem;
 }
 .status__label {
   display: block;
@@ -274,12 +339,12 @@ body {
 }
 .status__value--boxed {
   display: inline-block;
-  border: 1px solid var(--border-color);
-  padding: 5px 12px;
+  padding: 6px 6px;
   background-color: var(--box-bg-color);
   font-weight: normal; /* Normal weight */
   color: var(--text-color);
   font-size: 0.9em;
+  line-height: 0.6;
 }
 
 /* Ability Chart */
@@ -287,6 +352,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: flex-end; /* Align bars to bottom */
+
   /* Removed border/padding from container */
   border: none;
   position: relative;
@@ -294,7 +360,7 @@ body {
 }
 
 .ability-chart {
-  padding-top: 22px;
+  padding-top: 1rem;
 }
 
 .ability-chart__item {
@@ -306,7 +372,8 @@ body {
   text-align: center;
   position: relative;
   /* Set fixed height and background */
-  height: 11rem;
+  height: 29svh;
+  width: 3rem;
   padding-top: 20px; /* Keep space for labels above */
 }
 
@@ -402,13 +469,31 @@ body {
   border-bottom: none; /* No line needed */
   padding-bottom: 0;
 }
+
+.skill-block.skill-block--details.mobile {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  max-width: 50%;
+}
+
 .skill-block--details .details-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns for details */
   gap: 10px 20px; /* Row gap, Column gap */
 }
+
+.details-grid.mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .details__item {
-  /* Style individual detail items */
+  display: flex;
+  flex-direction: column;
 }
 .details__label {
   display: block;
@@ -422,4 +507,138 @@ body {
 .details__value {
   font-weight: normal; /* Normal weight */
   font-size: 0.95em;
+}
+
+.details__label.mobile {
+  font-size: 0.6rem;
+  margin-bottom: 0;
+}
+
+.details__value.mobile {
+  font-size: 0.7rem;
+}
+
+/* 1. Hide mobile-profile-container by default */
+.mobile-profile-container {
+  display: none;
+}
+
+/* MODAL */
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100svw;
+  height: 100svh;
+}
+
+@media (max-width: 430px) {
+  /* 1. Allow the page to scroll on mobile */
+  body {
+    overflow-y: auto;
+  }
+
+  .tabs-container {
+    padding-top: 0;
+    height: auto;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  .intro__content-wrapper {
+    display: none;
+  }
+
+  .dashboard-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .column.column--skills {
+    width: 100%;
+  }
+  /* 2. Let intro & skills expand naturally instead of fixed-height */
+  .column.column--intro {
+    padding-top: 1 rem;
+    height: auto;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+  .column.column--skills {
+    padding-top: 0;
+    height: auto;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+
+  /* 2.a. Show mobile-profile-container only on narrow (vertical mobile) */
+  .mobile-profile-container {
+    display: block;
+  }
+
+  .column.column--intro {
+    width: 100%;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+  }
+  /* 2.b. Hide the entire second column (profile) on vertical mobile */
+  .column--profile {
+    display: none !important;
+  }
+
+  /* 2.c. Stack the active tab-pane's children vertically */
+  .tab-pane.is-active {
+    /* already display:flex; override direction */
+    flex-direction: column;
+  }
+
+  .skill-block.skill-block--status {
+    display: none;
+  }
+
+  .skill-block.skill-block--status.mobile {
+    display: flex;
+  }
+
+  /* MODAL */
+  .modal-container {
+    display: none; /* Keep flex to center content */
+    position: fixed;
+    /* Change background-color to rgba for transparency */
+    background-color: rgba(
+      237,
+      247,
+      238,
+      0.7
+    ); /* Use rgba with alpha for transparency */
+    top: 0;
+    left: 0;
+    width: 100svw;
+    height: 100svh;
+    overflow: hidden;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items to the top */
+    padding-left: 4rem; /* Apply padding here instead */
+    padding-right: 3rem;
+    /* Remove opacity from here so content is not semi-transparent */
+    /* opacity: 0.9; */
+    backdrop-filter: blur(9px); /* This should now be more visible */
+  }
+
+  .modal-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: calc(
+      100svw - 4rem
+    ); /* Set a max-width considering dashboard padding */
+    height: 100%; /* Allow content to fill the container's available height */
+    overflow-y: auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    align-items: flex-start; /* Align content to the left */
+    gap: 1rem;
+    padding-right: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
